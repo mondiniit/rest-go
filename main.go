@@ -23,6 +23,15 @@ type profile struct{
    	MaritalStatus  string `json:"maritalStatus"`
 }
 
+type parking struct {
+	FirstName string `json:"firstName"`
+	LastName string `json:"lastName"`
+	NumberPatent string `json:"numberPatent"`
+	timeIN string `json:"timeIN"`
+	timeOUT string `json:"timeOUT"`
+	timeSTAY string `json:"timeSTAY"`
+}
+
 func main() {
 	router := mux.NewRouter()
 	router.HandleFunc("/hello", helloName).Methods("GET")
@@ -35,3 +44,9 @@ func helloName(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	
 }
+
+func postValues(){}
+
+func getValues(){}
+
+func updateValues(){}
